@@ -1,4 +1,3 @@
-import './App.css'
 import React from 'react'
 import LoginButton from '.././src/auth/LoginButton'
 import LogoutButton from '.././src/auth/LogoutButton'
