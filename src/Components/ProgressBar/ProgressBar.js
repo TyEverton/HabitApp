@@ -84,7 +84,7 @@ class ProgressBar extends Component {
   }
   handleBack(e) {
     this.setState((state) => {
-      if (state.width + 10 === 100) {
+      if (state.width + 0 === 100) {
         return { width: 0, score: state.score - 10 }
       }
       return { width: state.width - 10 }
@@ -93,7 +93,7 @@ class ProgressBar extends Component {
 
   handleForward(e) {
     this.setState((state) => {
-      if (state.width + 10 === 100) {
+      if (state.width + 0 === 100) {
         return { width: 0, score: state.score + 1 }
       }
       return { width: state.width + 10 }

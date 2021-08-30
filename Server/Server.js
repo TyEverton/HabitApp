@@ -4,10 +4,10 @@ const app = express()
 
 app.use(express.static(path.join(__dirname, './habit-app/Components/Home')))
 
-// app.use(
-//   '/styles.css',
-//   express.static(path.join(__dirname, '.././public/index.css')),
-// )
+app.use(
+  '/styles.css',
+  express.static(path.join(__dirname, '.././public/index.css')),
+)
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'))

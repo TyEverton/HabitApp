@@ -11,8 +11,10 @@ body {
   border-width: 5px;
   cursor: pointer;
   transition: 1s;
+  border-radius: 35px;
 }
 
 .profileBody {
   color: #f2f4ff;
+  
 }
