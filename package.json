@@ -1,6 +1,6 @@
 {
   "name": "habit-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.6.0",
@@ -21,8 +21,7 @@
   "scripts": {
     "start": "node server/server.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
