@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import UserHabits from '.././Components/Habits/UserHabits'
-import '../index.css'
-
+// import '../public/index.css'
 
 import axios from '../axios'
 
@@ -23,7 +22,5 @@ function Profile() {
     )
   )
 }
-
-
 
 export default Profile
