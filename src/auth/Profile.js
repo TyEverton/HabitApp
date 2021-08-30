@@ -19,7 +19,6 @@ function Profile() {
       <div className="profileBody">
         <h2>Welcome {user.name}!</h2>
         <UserHabits />
-
       </div>
     )
   )
