@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import ProgressBar from "../ProgressBar/"
+import ProgressBar from '../ProgressBar/'
+import HabitNotes from "./HabitNotes"
 
 class UserHabits extends Component {
   constructor(props) {
@@ -7,8 +8,6 @@ class UserHabits extends Component {
     this.state = {
       newItem: '',
       list: [],
-      newNote: '',
-      noteList: [],
     }
     this.handleChange = this.handleChange.bind(this)
     // this.handleNoteChange = this.handleNoteChange.bind(this)
@@ -135,31 +134,16 @@ class UserHabits extends Component {
                 return (
                   <ul key={item.id}>
                     {item.value}
-
                     <button onClick={() => this.deleteItem(item.id)}>x</button>
-                    <div>
-                      {' '}
-                      <textarea
-                        rows="5"
-                        cols="30"
-                        name="newNote"
-                        placeholder="How am I feeling?"
-                        onChange={this.handleChange}
-                      />
-                      <button
-                        onClick={() => this.saveNote}
-                        disabled={!this.state.newNote.length}
-                      >
-                        Save
-                      </button>
-                    </div>
                     <div></div>
-                   <ProgressBar />
+                    <ProgressBar />
+                    <HabitNotes />
                   </ul>
                 )
               })}
             </ul>
           </div>
+          
         </div>
         <form></form>
       </div>
