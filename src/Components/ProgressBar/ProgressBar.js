@@ -6,6 +6,7 @@ class ProgressBar extends Component {
     this.state = {
       width: 0,
       score: 0,
+      progressBarId: 1 + Math.random(),
     }
   }
 

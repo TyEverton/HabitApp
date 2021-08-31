@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ProgressBar from '../ProgressBar/'
-import HabitNotes from "./HabitNotes"
+import Notes from './Notes'
+
 
 class UserHabits extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class UserHabits extends Component {
       newItem: '',
       list: [],
     }
-    this.handleChange = this.handleChange.bind(this)
+
     // this.handleNoteChange = this.handleNoteChange.bind(this)
   }
 
@@ -39,26 +40,9 @@ class UserHabits extends Component {
   }
 
   //allows user to type and add info into note form
-  handleChange(event) {
-    const { name, value, type, checked } = event.target
-    type === 'checkbox'
-      ? this.setState({ [name]: checked })
-      : this.setState({ [name]: value })
-  }
 
-  //saves note in place
-  saveNote() {
-    const newNote = {
-      value: this.state.newItem.slice(),
-    }
-    const noteList = [...this.state.noteList]
-    noteList.push(newNote)
 
-    this.setState({
-      noteList,
-      newNote: '',
-    })
-  }
+
 
   //incorporates local storage
   componentDidMount() {
@@ -137,13 +121,12 @@ class UserHabits extends Component {
                     <button onClick={() => this.deleteItem(item.id)}>x</button>
                     <div></div>
                     <ProgressBar />
-                    <HabitNotes />
+                    <Notes notes={this.state.notes}/>
                   </ul>
                 )
               })}
             </ul>
           </div>
-          
         </div>
         <form></form>
       </div>
