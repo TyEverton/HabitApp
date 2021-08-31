@@ -1,39 +1,35 @@
-import React, { Component } from 'react'
-import ProgressBar from '../ProgressBar/'
-import Notes from '../Notes/Notes'
+import { Component } from 'react'
 
-class UserHabits extends Component {
+class Notes extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      newItem: '',
-      list: [],
+      newNote: '',
+      noteList: [],
     }
   }
 
-  //add new habit
-  addItem() {
-    const newItem = {
+  addNote() {
+    const newNote = {
       id: 1 + Math.random(),
-      value: this.state.newItem.slice(),
+      value: this.state.newNote.slice(),
     }
-    const list = [...this.state.list]
-    list.push(newItem)
+    const noteList = [...this.state.noteList]
+    noteList.push(newNote)
 
     this.setState({
-      list,
-      newItem: '',
+      noteList,
+      newNote: '',
     })
   }
 
-  //delete habit
   deleteItem(id) {
     // copy current list of items
-    const list = [...this.state.list]
+    const noteList = [...this.state.noteList]
     // filter out the item being deleted
-    const updatedList = list.filter((item) => item.id !== id)
+    const updatedList = noteList.filter((item) => item.id !== id)
 
-    this.setState({ list: updatedList })
+    this.setState({ noteList: updatedList })
   }
 
   //allows user to type and add info into note form
@@ -81,7 +77,6 @@ class UserHabits extends Component {
     }
   }
 
-  //updates user input
   updateInput(item, value) {
     this.setState({ [item]: value })
   }
@@ -89,42 +84,32 @@ class UserHabits extends Component {
   render() {
     return (
       <div>
-        <h1>MY HABITS</h1>
-        <div>
-          <div>
-            <input
-              type="text"
-              placeholder="New Habit"
-              value={this.state.newItem}
-              onChange={(event) =>
-                this.updateInput('newItem', event.target.value)
-              }
-            />
-            <button
-              onClick={() => this.addItem()}
-              disabled={!this.state.newItem.length}
-            >
-              <i> + </i>
-            </button>
-            <br /> <br />
-            <ul>
-              {this.state.list.map((item) => {
-                return (
-                  <ul key={item.id}>
-                    {item.value}
-                    <button onClick={() => this.deleteItem(item.id)}>x</button>
-                    <div></div>
-                    <ProgressBar />
-                    <Notes />
-                  </ul>
-                )
-              })}
-            </ul>
-          </div>
-        </div>
-        <form></form>
+        <textarea
+          type="text"
+          placeholder="How am I feeling?"
+          value={this.state.newNote}
+          onChange={(event) => this.updateInput('newNote', event.target.value)}
+        ></textarea>
+        <button onClick={() => this.addNote()} timestamp={Date.now()}>
+          Save
+        </button>
+        <h1>
+          {this.state.noteList.map((item) => {
+            return <ul key={item.id}>{item.value}</ul>
+          })}
+        </h1>
+        <ul>
+          {this.state.noteList.map((item) => {
+            return (
+              <ul key={item.id}>
+                <button onClick={() => this.deleteItem(item.id)}>x</button>
+              </ul>
+            )
+          })}
+        </ul>
       </div>
     )
   }
 }
-export default UserHabits
+
+export default Notes

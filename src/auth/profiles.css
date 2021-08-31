@@ -1,0 +1,12 @@
+.logoutButton {
+display: flex;
+ flex-flow: row;
+ justify-content: space-between;
+ margin-left: auto;
+}
+
+.habits {
+  border-style: solid;
+  color: white;
+  
+}
