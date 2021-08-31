@@ -75,7 +75,7 @@ class ProgressBar extends Component {
           onClick={(e) => {
             this.handleBack(e)
           }}
-          disabled={this.state.width <= 0}
+          disabled={this.state.width === 1}
         >
           Missed
         </button>
@@ -87,7 +87,7 @@ class ProgressBar extends Component {
       if (state.width + 0 === 100) {
         return { width: 0, score: state.score - 10 }
       }
-      let newScore = state.width - 1.52
+      let newScore = state.width - 1.5
       return { width: parseFloat(newScore.toFixed(0)) }
     })
   }
@@ -97,9 +97,9 @@ class ProgressBar extends Component {
       if (state.width + 0 === 100) {
         return { width: 0, score: state.score + 1 }
       }
-      let newScore = state.width + 1.52
+      let newScore = state.width + 1.5
       return { width: parseFloat(newScore.toFixed(0)) }
-    })   
+    })
   }
 }
 
