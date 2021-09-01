@@ -1,12 +1,17 @@
-.logoutButton {
-display: flex;
- flex-flow: row;
- justify-content: space-between;
- margin-left: auto;
+body {
+  margin: 0px;
+  background-color: #393939;
+}
+
+.homeNavBar {
+  background-color: 535353;
+  width: 100vw;
+  height: 65px;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.75);
+  z-index: 0;
 }
 
 .habits {
   border-style: solid;
   color: white;
-  
 }

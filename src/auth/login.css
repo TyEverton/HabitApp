@@ -1,0 +1,95 @@
+body {
+  background-color: #393939;
+  margin: 0px;
+}
+
+.getStartedBtn {
+  height: 50px;
+  width: 175px;
+  color: #f2f4ff;
+  background-color: #279cc7;
+  border-radius: 65px;
+  border-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.getStartedBtn:hover {
+  transform: scale(1.1);
+}
+
+.welcomeContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 300px;
+}
+
+.welcomeQuote {
+  color: #f2f4ff;
+}
+
+.homeBtns {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  width: 155px;
+  align-items: center;
+  justify-content: space-between;
+  float: right;
+  margin-right: 5%;
+  margin-top: 15px;
+}
+
+.homeNavBar {
+  background-color: 535353;
+  width: 100%;
+  height: 65px;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+.loginBtn {
+  height: 35px;
+  width: 60px;
+  color: #f2f4ff;
+  background-color: transparent;
+  border-color: #f2f4ff;
+  border-radius: 5px;
+  border-width: thin;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.loginBtn:hover {
+  background-color: #5e5d5d;
+  cursor: pointer;
+
+}
+
+.devicon-github-original {
+  font-size: 2rem;
+  border-style: none;
+  background: none;
+  color: #2abcef;
+  transition: 0.2s ease-in-out;
+}
+
+.devicon-github-original:hover {
+  transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+.devicon-linkedin-plain {
+  font-size: 2rem;
+  border-style: none;
+  background: none;
+  transition: 0.2s ease-in-out;
+}
+
+.devicon-linkedin-plain:hover {
+  transform: scale(1.1);
+    cursor: pointer;
+
+}

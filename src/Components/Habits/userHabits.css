@@ -1,0 +1,36 @@
+.addBtn {
+  height: 25px;
+  width: 40px;
+  color: #f2f4ff;
+  background-color: transparent;
+  border-color: #f2f4ff;
+  border-radius: 5px;
+  border-width: thin;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.addBtn:hover{
+  background-color: #5e5d5d;
+  cursor: pointer;
+}
+
+.removeBtn {
+  height: 25px;
+  width: 40px;
+  color: #f2f4ff;
+  background-color: transparent;
+  border-color: #f2f4ff;
+  border-radius: 5px;
+  border-width: thin;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin: 5px;
+}
+
+.habitInbox{
+  height: 50px;
+  width: 190px;
+  border-radius: 5px;
+  margin: 5px;
+}

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import ProgressBar from '../ProgressBar/'
 import Notes from '../Notes/Notes'
+import Quotes from '../Quotes/Quotes'
+import './userHabits.css'
 
 class UserHabits extends Component {
   constructor(props) {
@@ -89,10 +91,10 @@ class UserHabits extends Component {
   render() {
     return (
       <div>
-        <h1>MY HABITS</h1>
         <div>
           <div>
             <input
+              className="habitInbox"
               type="text"
               placeholder="New Habit"
               value={this.state.newItem}
@@ -102,27 +104,32 @@ class UserHabits extends Component {
             />
             <button
               onClick={() => this.addItem()}
+              className="addBtn"
               disabled={!this.state.newItem.length}
             >
               <i> + </i>
             </button>
-            <br /> <br />
+
             <ul>
               {this.state.list.map((item) => {
                 return (
                   <ul key={item.id}>
                     {item.value}
-                    <button onClick={() => this.deleteItem(item.id)}>x</button>
-                    <div></div>
+                    <button
+                      onClick={() => this.deleteItem(item.id)}
+                      className="removeBtn"
+                    >
+                      x
+                    </button>
                     <ProgressBar />
                     <Notes />
+                    <Quotes />
                   </ul>
                 )
               })}
             </ul>
           </div>
         </div>
-        <form></form>
       </div>
     )
   }
