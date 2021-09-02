@@ -86,12 +86,14 @@ class Notes extends Component {
       <div>
         <textarea
           type="text"
-          placeholder="How am I feeling?"
+          placeholder="How am I feeling about my progress so far?"
           value={this.state.newNote}
           onChange={(event) => this.updateInput('newNote', event.target.value)}
+          cols="30"
+          rows="5"
         ></textarea>
         <button onClick={() => this.addNote()} timestamp={Date.now()}>
-          Save
+          SAVE
         </button>
         <h1>
           {this.state.noteList.map((item) => {

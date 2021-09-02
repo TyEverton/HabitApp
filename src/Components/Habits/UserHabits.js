@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import ProgressBar from '../ProgressBar/'
-import Notes from '../Notes/Notes'
-import Quotes from '../Quotes/Quotes'
 import './userHabits.css'
 
 class UserHabits extends Component {
@@ -122,8 +120,7 @@ class UserHabits extends Component {
                       x
                     </button>
                     <ProgressBar />
-                    <Notes />
-                    <Quotes />
+                   
                   </ul>
                 )
               })}
