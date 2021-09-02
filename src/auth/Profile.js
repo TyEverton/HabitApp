@@ -5,10 +5,10 @@ import './profiles.css'
 import Notes from ".././Components/Notes/Notes"
 import Quotes from ".././Components/Quotes/Quotes"
 import './menu.css'
+// import AddQuotes from ".././Components/Quotes/AddQuotes"
 
 
 function Profile() {
-
   const { user, isAuthenticated } = useAuth0()
   return (
     isAuthenticated && (
@@ -26,6 +26,7 @@ function Profile() {
           <UserHabits />
           <Notes />
           <Quotes />
+          {/* <AddQuotes /> */}
         </div>
       </div>
     )

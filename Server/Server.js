@@ -5,6 +5,7 @@ const app = express()
 const massive = require('massive')
 const quotes_controller = require('./controllers/quotes_controller')
 const { parse } = require('pg-connection-string')
+const cors = require('cors')
 
 const CONNECTION_STRING = parse(process.env.CONNECTION_STRING)
 const PORT = 5432
@@ -14,9 +15,18 @@ CONNECTION_STRING.ssl = {
 }
 
 app.use(
-  '/styles.css',
+  cors(),
+  // // function (req, res) {
+  // //   res.header('Access-Control-Allow-Origin', 'http://localhost:5432/')
+  // //   res.header(
+  // //     'Access-Control-Allow-Headers',
+  // //     'Origin, X-Requested-With, Content-Type, Accept',
+  // //   )
+  // },
   express.static(path.join(__dirname, '.././public/index.css')),
 )
+
+//look into the security vulnerabilities and the lines
 
 massive(CONNECTION_STRING).then((database) => {
   app.set('db', database)
@@ -24,5 +34,6 @@ massive(CONNECTION_STRING).then((database) => {
 })
 
 app.get('/api/quotes', quotes_controller.randomQuote)
+app.post('/api/quotes', quotes_controller.addQuote)
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`))

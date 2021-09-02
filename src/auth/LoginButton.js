@@ -18,7 +18,7 @@ const LoginButton = () => {
               rel="noreferrer"
             >
               <button
-                class="devicon-github-original colored"
+                className="devicon-github-original colored"
                 rel="noreferrer"
               ></button>
               <a
@@ -26,7 +26,7 @@ const LoginButton = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <button class="devicon-linkedin-plain colored"></button>
+                <button className="devicon-linkedin-plain colored"></button>
               </a>
             </a>
           </div>

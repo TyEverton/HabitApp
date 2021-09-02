@@ -7,7 +7,7 @@ const LogoutButton = () => {
   return (
     isAuthenticated && (
       <div className="profileNav ">
-        <button class="logoutBtn" onClick={() => logout()}>
+        <button className="logoutBtn" onClick={() => logout()}>
           LOGOUT
         </button>
       </div>
