@@ -4,12 +4,13 @@ module.exports = {
     //line 8 says that this was all successful, so send the first quote in the array
     const db = req.app.get('db')
     const quote = await db.randomQuote()
-    
     return res.status(201).send(quote[0])
   },
-
   addQuote: async (req, res) => {
-    const db = req.app.post('db')
-
-  }
+    const db = req.app.get('db')
+    console.log(req.body)
+    const { quote, author } = req.body
+    await db.addQuote(quote, author)
+    return res.status(200)
+  },
 }

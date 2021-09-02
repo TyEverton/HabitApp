@@ -5,7 +5,7 @@ import './profiles.css'
 import Notes from ".././Components/Notes/Notes"
 import Quotes from ".././Components/Quotes/Quotes"
 import './menu.css'
-// import AddQuotes from ".././Components/Quotes/AddQuotes"
+import AddQuotes from ".././Components/Quotes/AddQuotes"
 
 
 function Profile() {
@@ -26,7 +26,7 @@ function Profile() {
           <UserHabits />
           <Notes />
           <Quotes />
-          {/* <AddQuotes /> */}
+          <AddQuotes />
         </div>
       </div>
     )

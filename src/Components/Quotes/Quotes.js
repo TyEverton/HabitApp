@@ -5,7 +5,7 @@ import './quotes.css'
 const Quotes = () => {
   const [quote, setQuote] = useState({})
 
-  const grabQuote = () => {
+  const addQuote = () => {
     const config = {
       url: 'http://localhost:5432/api/quotes',
       method: 'GET',
@@ -27,7 +27,7 @@ const Quotes = () => {
           <h3 className="motivationHeader">
             NEED SOME QUOTIVATION? CLICK THE AL'MIGHTY QUOTE GENERATOR!
           </h3>
-          <button onClick={grabQuote} className="quoteBtn">
+          <button onClick={addQuote} className="quoteBtn">
             QUOTES
           </button>
           <h2>

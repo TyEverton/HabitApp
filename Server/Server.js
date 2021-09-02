@@ -14,6 +14,8 @@ CONNECTION_STRING.ssl = {
   rejectUnauthorized: false,
 }
 
+app.use(express.json())
+
 app.use(
   cors(),
   // // function (req, res) {
