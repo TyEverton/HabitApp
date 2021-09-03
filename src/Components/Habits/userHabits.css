@@ -16,8 +16,8 @@
 }
 
 .removeBtn {
-  height: 25px;
-  width: 40px;
+  height: 35px;
+  width: 80px;
   color: #f2f4ff;
   background-color: transparent;
   border-color: #f2f4ff;
@@ -25,7 +25,7 @@
   border-width: thin;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  margin: 5px;
+  margin-left: 17px;
 }
 
 .habitInbox{
@@ -34,3 +34,4 @@
   border-radius: 5px;
   margin: 5px;
 }
+

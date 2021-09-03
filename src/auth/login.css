@@ -12,6 +12,7 @@ body {
   border-color: transparent;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+    font-family: 'Montserrat';
 }
 
 .getStartedBtn:hover {
@@ -24,10 +25,12 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 300px;
+    font-family: 'Montserrat';
 }
 
 .welcomeQuote {
   color: #f2f4ff;
+    font-family: 'Montserrat';
 }
 
 .homeBtns {
@@ -40,6 +43,7 @@ body {
   float: right;
   margin-right: 5%;
   margin-top: 15px;
+    font-family: 'Montserrat';
 }
 
 .homeNavBar {

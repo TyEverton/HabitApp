@@ -23,17 +23,15 @@ const Quotes = () => {
   return (
     <div>
       <div>
+        <h3 className="quoteHeader">CLICK BELOW FOR SOME MOTIVATION</h3>
         <section className="grabQuoteContainer">
-          <h3 className="motivationHeader">
-            NEED SOME QUOTIVATION? CLICK THE AL'MIGHTY QUOTE GENERATOR!
-          </h3>
-          <button onClick={addQuote} className="quoteBtn">
-            QUOTES
-          </button>
           <h2>
             {quote.quote} -{quote.author}
           </h2>
         </section>
+        <button onClick={addQuote} className="quoteBtn">
+          QUOTES
+        </button>
       </div>
     </div>
   )

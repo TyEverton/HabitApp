@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import './progressBar.css'
 
 class ProgressBar extends Component {
   constructor(props) {
@@ -63,22 +64,26 @@ class ProgressBar extends Component {
         <br />
         {this.state.width + '%'}
         <div className="bar" style={style} />
-        <button
-          onClick={(e) => {
-            this.handleForward(e)
-          }}
-          disabled={this.state.width >= 100}
-        >
-          Made It!
-        </button>
-        <button
-          onClick={(e) => {
-            this.handleBack(e)
-          }}
-          disabled={this.state.width <= 1}
-        >
-          Missed
-        </button>
+        <div>
+          <button
+            className="btns"
+            onClick={(e) => {
+              this.handleForward(e)
+            }}
+            disabled={this.state.width >= 100}
+          >
+            Made It!
+          </button>
+          <button
+            className="btns"
+            onClick={(e) => {
+              this.handleBack(e)
+            }}
+            disabled={this.state.width <= 1}
+          >
+            Missed
+          </button>
+        </div>
       </div>
     )
   }

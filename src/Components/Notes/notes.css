@@ -1,0 +1,24 @@
+.noteContainer {
+  position: absolute;
+  left: 75px;
+  bottom: 15%;
+  font-size: 13px;
+}
+
+.noteBtn {
+  height: 35px;
+  width: 50px;
+  color: #f2f4ff;
+  background-color: transparent;
+  border-color: #f2f4ff;
+  border-radius: 5px;
+  border-width: thin;
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+  position: relative;
+}
+
+.timestampBody {
+  font-size: 14px;
+}

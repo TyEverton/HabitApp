@@ -1,0 +1,22 @@
+.btns{
+height: 35px;
+  width: 70px;
+  color: #f2f4ff;
+  background-color: transparent;
+  border-color: #f2f4ff;
+  border-radius: 5px;
+  border-width: thin;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-right: 5%;
+  margin-top: 15px;
+ display: inline;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+}
+
+.btns:hover {
+   background-color: #5e5d5d;
+  cursor: pointer;
+}

@@ -33,9 +33,7 @@ const LoginButton = () => {
         </section>
         <section className="welcomeContainer">
           <h1 className="welcomeQuote">
-            "YOU ARE WHAT YOU REPEATEDLY DO EVERYDAY. SO WHATEVER YOU'RE DOING
-            IS WHAT YOU BECOME. IF EXCELLENCE IS SOMETHING YOU'RE STRIVING FOR,
-            THEN ITS NOT AN ACCIDENT. ITS A HABIT." -GREG PLITT
+            "We first make our habits, and then our habits make us." - John Dryden
           </h1>
           <button onClick={() => loginWithRedirect()} className="getStartedBtn">
             GET STARTED

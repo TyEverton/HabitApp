@@ -1,30 +1,38 @@
 .quoteBtn {
-   height: 35px;
+  height: 35px;
   width: 70px;
   color: #f2f4ff;
   background-color: transparent;
   border-color: #f2f4ff;
   border-radius: 5px;
   border-width: thin;
-  float: right;
-  
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  position: relative;
-  z-index: 2;
+  position: absolute;
   transition: 0.2s ease-in-out;
+  top: 70%;
+  left: 48%;
 }
 
-.motivationHeader {
-
+.quoteHeader{
+  margin-top: 13%;
+  position: absolute;
+   left: 50%;
+  transform: translateX(-50%);
 }
+
 
 .grabQuoteContainer {
+  position: absolute;
+  top: 75%;
   display: flex;
   flex-direction: column;
-  align-items: right;
-  background-color: red;
-  float: right;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat';
+  font-size: 13px;
+  border-style: thick;
+  border-color: white;
+  border: solid;
+  left: 50%;
+  transform: translateX(-50%);
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ProgressBar from '../ProgressBar/'
 import './userHabits.css'
+import Notes from '../Notes/Notes'
 
 class UserHabits extends Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class UserHabits extends Component {
     this.state = {
       newItem: '',
       list: [],
+     
     }
   }
 
@@ -108,7 +110,7 @@ class UserHabits extends Component {
               <i> + </i>
             </button>
 
-            <ul>
+            <ul className="habitBody">
               {this.state.list.map((item) => {
                 return (
                   <ul key={item.id}>
@@ -117,10 +119,10 @@ class UserHabits extends Component {
                       onClick={() => this.deleteItem(item.id)}
                       className="removeBtn"
                     >
-                      x
+                      DELETE HABIT
                     </button>
                     <ProgressBar />
-                   
+                    <Notes />
                   </ul>
                 )
               })}

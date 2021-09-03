@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import './notes.css'
 
 class Notes extends Component {
   constructor(props) {
@@ -6,6 +7,7 @@ class Notes extends Component {
     this.state = {
       newNote: '',
       noteList: [],
+      currentDate: Date(),
     }
   }
 
@@ -37,11 +39,17 @@ class Notes extends Component {
   //incorporates local storage
   componentDidMount() {
     this.hydrateStateWithLocalStorage()
+    this.getDate()
     //adds event listener to save state to local storage when user leaves or refreshes the page
     window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this),
     )
+  }
+
+  getDate = () => {
+    let date = new Date().toDateString()
+    this.setState({ date })
   }
 
   componentWillUnmount() {
@@ -83,7 +91,7 @@ class Notes extends Component {
 
   render() {
     return (
-      <div>
+      <div className="noteContainer">
         <textarea
           type="text"
           placeholder="How am I feeling about my progress so far?"
@@ -100,11 +108,17 @@ class Notes extends Component {
             return <ul key={item.id}>{item.value}</ul>
           })}
         </h1>
-        <ul>
+        <ul className="timestampBody">
           {this.state.noteList.map((item) => {
             return (
               <ul key={item.id}>
-                <button onClick={() => this.deleteItem(item.id)}>x</button>
+                <button
+                  onClick={() => this.deleteItem(item.id)}
+                  className="noteBtn"
+                >
+                  x
+                </button>
+                {this.state.currentDate}
               </ul>
             )
           })}

@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   background-color: #393939;
+    font-family: 'Montserrat';
 }
 
 .homeNavBar {
@@ -9,6 +10,7 @@ body {
   height: 65px;
   box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.75);
   z-index: 0;
+ 
 }
 
 .habits {

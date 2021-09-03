@@ -1,5 +1,6 @@
-import { useState, setState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
+import './AddQuote.css'
 
 const AddNew = () => {
   const [quote, setQuote] = useState('')
@@ -30,7 +31,6 @@ const AddNew = () => {
     console.log(bookData)
     axios(config)
       .then((res) => {
-        console.log(quote)
         setQuote('')
         setAuthor('')
       })
@@ -38,11 +38,12 @@ const AddNew = () => {
         console.log(err)
       })
   }
-  console.log(bookData)
+
+  
 
   return (
-    <div>
-      <h3 className="addQuoteHeader">OR ADD YOUR OWN FAVORITE QUOTE HERE</h3>
+    <div className="addQuoteContainer">
+      <h3>ADD YOUR OWN QUOTE HERE</h3>
       <textarea
         cols="30"
         rows="5"
@@ -58,7 +59,10 @@ const AddNew = () => {
         onChange={handleAuthorChange}
         value={author.author}
       ></input>
-      <button onClick={addQuote}>SAVE</button>
+      <br />
+      <button className="addQuoteBtn" onClick={addQuote}>
+        SAVE
+      </button>
     </div>
   )
 }

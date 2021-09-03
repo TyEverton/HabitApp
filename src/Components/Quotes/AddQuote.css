@@ -1,26 +1,30 @@
+.addQuoteContainer {
+  position: absolute;
+  margin-top: 8%;
+  left: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat';
+}
 
-.logoutBtn {
+.addQuoteBtn {
   height: 35px;
-  width: 70px;
+  width: 50px;
   color: #f2f4ff;
   background-color: transparent;
   border-color: #f2f4ff;
   border-radius: 5px;
   border-width: thin;
-  float: right;
   margin-right: 5%;
   margin-top: 15px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  position: relative;
-  z-index: 2;
   transition: 0.2s ease-in-out;
-    font-family: 'Montserrat';
 }
 
-.logoutBtn:hover {
+.addQuoteBtn:hover {
   background-color: #5e5d5d;
   cursor: pointer;
 }
-
